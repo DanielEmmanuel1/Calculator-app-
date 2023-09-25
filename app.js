@@ -1,4 +1,4 @@
-\const displayContainer = document.querySelector('.display-container');
+const displayContainer = document.querySelector('.display-container');
 const displayContent = document.getElementById('display-content');
 const displayBoard = displayContainer.querySelector('.content-board');
 const allButtons = document.querySelectorAll('button');
