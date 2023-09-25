@@ -52,3 +52,11 @@ button {
     grid-row-gap: 10px;
 }
 
+
+/* iphone 12 pro */
+@media screen and (min-width: 100px) {
+    .container{
+        min-width: 270px;
+        max-width: 270px;
+    }
+}
