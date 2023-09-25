@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Calculator App</title>
 </head>
+
 <body>
     <div class="container">
-        <div class="content-board"></div>
+        <div class="display-container">
+            <div class="content-board" id="display-content"></div>
+        </div>
         <div class="button-container">
             <button class="AC">AC</button>
             <button class="division">/</button>
@@ -27,10 +31,11 @@
             <button class="equal">=</button>
             <button class="subtraction">-</button>
             <button class="addition">+</button>
-            <button class="delete"></button>
+            <button class="delete">←</button>
         </div>
     </div>
 
     <script src="app.js"></script>
 </body>
+
 </html>
