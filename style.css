@@ -4,11 +4,27 @@
 }
 
 body {
+    background-color: rgb(123, 214, 239);
+}
+
+.header {
+    
+    font-weight: normal;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.parent {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 100vh;
     align-items: center;
-    background-color: blue;
+}
+
+.percent {
+    visibility: hidden;
 }
 
 #star {
@@ -17,50 +33,77 @@ body {
 }
 
 .divide {
-    background-color: #C00AB8;
+    background-color: #fff;
+    color: black;
     border-radius: 100%;
     height: 2em;
     width: 2em;
     font-size: 1.5em;
     margin-top: 0.5em;
     font-weight: 600;
-    color: white;
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 0.7),
+        10px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .equal {
-    background-color: #017B2A;
+    background-color: #fff;
+    color: black;
     width: 120%;
     margin-left: 120px;
     height: 7vh;
     border-radius: 50px;
     margin-top: 5px;
-    color: white;
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 0.7),
+        10px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
+.equal:hover {
+    box-shadow:
+        -5px -5px 10px rgba(255, 255, 255, 0.7),
+        5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 .add {
-    background-color: #B67006;
+    background-color: #fff;
+    color: black;
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 0.7),
+        10px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
     border-radius: 100%;
     height: 2em;
     width: 2em;
     font-size: 1.5em;
     margin-top: 0.5em;
     font-weight: 600;
-    color: white;
 }
 
 .sub {
-    background-color: #167FCB;
+    background-color: #fff;
+    color: black;
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 0.7),
+        10px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
     border-radius: 100%;
     height: 2em;
     width: 2em;
     font-size: 1.5em;
     margin-top: 0.5em;
     font-weight: 600;
-    color: white;
 }
 
 .backspace {
-    background-color: #ea4184;
+    background-color: rgb(222, 67, 67);
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 0.7),
+        10px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
     border-radius: 100%;
     height: 2em;
     width: 2em;
@@ -69,15 +112,33 @@ body {
     color: white;
 }
 
+.backspace:hover {
+    background-color: red;
+}
+
+.num:hover {
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 0.7),
+        10px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 100%;
+    width: 3vw;
+    height: 6vh;
+}
+
 .icon {
-    background-color: #c51919;
+    background-color: #fff;
+    color: black;
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 0.7),
+        10px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
     border-radius: 100%;
     height: 2em;
     width: 2em;
     font-size: 1.5em;
     margin-top: 0.5em;
     font-weight: 600;
-    color: white;
 }
 
 .container {
@@ -92,10 +153,8 @@ body {
 
 .content-board {
     background-color: #efefef;
-    /* background-color: black; */
     height: 5em;
     overflow: hidden;
-    /* margin-top: 10px; */
     margin-bottom: 10px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -175,47 +234,65 @@ button {
         padding-top: 13px;
         font-size: 1.5em;
     }
-    
+
     .divide {
-        background-color: #C00AB8;
-        border-radius: 100%;
-        height: 1.5em;
-        width: 1.5em;
-        font-size: 1.5em;
-        color: white;
-    }
-    
-    .equal {
-        background-color: #017B2A;
-        width: 120%;
-        margin-left: 70px;
-        height: 7vh;
-        border-radius: 50px;
-        margin-top: 5px;
-        color: white;
-    }
-    
-    .add {
-        background-color: #B67006;
-        border-radius: 100%;
-        height: 1.5em;
-        width: 1.5em;
-        font-size: 1.5em;
-        color: white;
-    }
-    
-    .sub {
-        background-color: #167FCB;
+        background-color: #fff;
+        color: black;
+        box-shadow:
+            -10px -10px 20px rgba(255, 255, 255, 0.7),
+            10px 10px 20px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out;
         border-radius: 100%;
         height: 1.5em;
         width: 1.5em;
         font-size: 1.5em;
         margin-top: 0.5em;
-        color: white;
+        font-weight: 600;
     }
-    
+
+    .equal {
+        background-color: #fff;
+        color: black;
+        box-shadow:
+            -10px -10px 20px rgba(255, 255, 255, 0.7),
+            10px 10px 20px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out;
+        width: 120%;
+        margin-left: 70px;
+        height: 7vh;
+        border-radius: 50px;
+        margin-top: 5px;
+    }
+
+    .add {
+        background-color: #fff;
+        color: black;
+        box-shadow:
+            -10px -10px 20px rgba(255, 255, 255, 0.7),
+            10px 10px 20px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out;
+        border-radius: 100%;
+        height: 1.5em;
+        width: 1.5em;
+        font-size: 1.5em;
+    }
+
+    .sub {
+        background-color: #fff;
+        color: black;
+        box-shadow:
+            -10px -10px 20px rgba(255, 255, 255, 0.7),
+            10px 10px 20px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out;
+        border-radius: 100%;
+        height: 1.5em;
+        width: 1.5em;
+        font-size: 1.5em;
+        margin-top: 0.5em;
+    }
+
     .backspace {
-        background-color: #ea4184;
+        background-color: rgb(222, 67, 67);
         border-radius: 100%;
         height: 2em;
         width: 2em;
@@ -223,13 +300,31 @@ button {
         margin-top: 0.5em;
         color: white;
     }
-    
+
     .icon {
-        background-color: #c51919;
+        background-color: #fff;
+        color: black;
+        box-shadow:
+            -10px -10px 20px rgba(255, 255, 255, 0.7),
+            10px 10px 20px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out;
         border-radius: 100%;
         height: 1.5em;
         width: 1.5em;
         font-size: 1.5em;
-        color: white;
+    }
+
+    .num:hover {
+        box-shadow:
+            -10px -10px 20px rgba(255, 255, 255, 0.7),
+            10px 10px 20px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out;
+        border-radius: 100%;
+        width: 10vw;
+        height: 6vh;
+    }
+
+    .icon, .divide, .add, .sub{
+        font-weight: normal;
     }
 }
