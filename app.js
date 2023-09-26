@@ -1,6 +1,9 @@
 const displayContainer = document.querySelector('.display-container');
 const displayContent = document.getElementById('display-content');
 const allButtons = document.querySelectorAll('button');
+
+
+
 let input = '';
 let calculationPerformed = false;
 
@@ -8,7 +11,7 @@ allButtons.forEach(button => {
     button.addEventListener('click', () => {
         const buttonText = button.textContent;
 
-        if (buttonText === 'AC') {
+        if (buttonText === 'C') {
             input = '';
             displayContent.textContent = '';
             calculationPerformed = false;
@@ -22,9 +25,9 @@ allButtons.forEach(button => {
                 input = eval(input);
                 const resultSpan = document.createElement('span');
                 resultSpan.textContent = input;
-                resultSpan.style.color = 'white';
+                resultSpan.style.color = 'black';
                 resultSpan.style.fontSize = '25px';
-                displayContent.textContent = ''; // Clear the display
+                displayContent.textContent = '';
                 displayContent.appendChild(resultSpan);
                 calculationPerformed = true;
             } catch (error) {
