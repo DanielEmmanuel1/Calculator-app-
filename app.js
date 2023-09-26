@@ -34,7 +34,7 @@ allButtons.forEach(button => {
                 displayContent.textContent = 'Error';
                 calculationPerformed = false;
             }
-        } else if (['+', '-', '*', '/'].includes(buttonText)) {
+        } else if (['+', '-', '*', '/', '%'].includes(buttonText)) {
             if (calculationPerformed) {
                 // Allow operators after calculation
                 input = input.toString(); // Convert the result to a string
