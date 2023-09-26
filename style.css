@@ -34,7 +34,9 @@ body {
     height: 7vh;
     border-radius: 50px;
     margin-top: 5px;
+    color: white;
 }
+
 .add {
     background-color: #B67006;
     border-radius: 100%;
@@ -132,8 +134,102 @@ button {
 
 
 /* iphone 12 pro */
-@media screen and (min-width: 100px) {
+@media screen and (max-width: 416px) {
     .container {
-        min-width: 330px;
+        width: fit-content;
+        max-width: 400px;
+        height: fit-content;
+        /* padding: 10px 10px; */
+    }
+
+    .equal {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .container {
+        width: fit-content;
+        max-width: 400px;
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: fit-content;
+        max-width: 250px;
+        height: fit-content;
+    }
+
+    button {
+        width: 1em;
+        height: 1em;
+        color: black;
+        background-color: #fff;
+        border: none;
+        font-size: 1em;
+    }
+
+    #star {
+        padding-top: 13px;
+        font-size: 1.5em;
+    }
+    
+    .divide {
+        background-color: #C00AB8;
+        border-radius: 100%;
+        height: 1.5em;
+        width: 1.5em;
+        font-size: 1.5em;
+        color: white;
+    }
+    
+    .equal {
+        background-color: #017B2A;
+        width: 120%;
+        margin-left: 70px;
+        height: 7vh;
+        border-radius: 50px;
+        margin-top: 5px;
+        color: white;
+    }
+    
+    .add {
+        background-color: #B67006;
+        border-radius: 100%;
+        height: 1.5em;
+        width: 1.5em;
+        font-size: 1.5em;
+        color: white;
+    }
+    
+    .sub {
+        background-color: #167FCB;
+        border-radius: 100%;
+        height: 1.5em;
+        width: 1.5em;
+        font-size: 1.5em;
+        margin-top: 0.5em;
+        color: white;
+    }
+    
+    .backspace {
+        background-color: #ea4184;
+        border-radius: 100%;
+        height: 2em;
+        width: 2em;
+        font-size: 1.5em;
+        margin-top: 0.5em;
+        color: white;
+    }
+    
+    .icon {
+        background-color: #c51919;
+        border-radius: 100%;
+        height: 1.5em;
+        width: 1.5em;
+        font-size: 1.5em;
+        color: white;
     }
 }
