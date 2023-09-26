@@ -1,28 +1,22 @@
 const displayContainer = document.querySelector('.display-container');
 const displayContent = document.getElementById('display-content');
-const displayBoard = displayContainer.querySelector('.content-board');
 const allButtons = document.querySelectorAll('button');
 let input = '';
+let calculationPerformed = false;
 
 allButtons.forEach(button => {
     button.addEventListener('click', () => {
         const buttonText = button.textContent;
-        const textNode = document.createTextNode(buttonText);
-        const span = document.createElement('span');
-        span.appendChild(textNode);
-        span.style.color = 'white';
-        span.style.fontSize = '25px';
-        span.style.paddingRight = '5px';
-        displayContent.appendChild(span);
 
         if (buttonText === 'AC') {
             input = '';
             displayContent.textContent = '';
-
+            calculationPerformed = false;
         } else if (buttonText === '←') {
-            input = input.slice(0, -1);
-            displayContent.textContent = input;
-            
+            if (input.length > 0) {
+                input = input.slice(0, -1);
+                displayContent.textContent = displayContent.textContent.slice(0, -1);
+            }
         } else if (buttonText === '=') {
             try {
                 input = eval(input);
@@ -30,19 +24,33 @@ allButtons.forEach(button => {
                 resultSpan.textContent = input;
                 resultSpan.style.color = 'white';
                 resultSpan.style.fontSize = '25px';
-                resultSpan.style.paddingRight = '5px';
+                displayContent.textContent = ''; // Clear the display
                 displayContent.appendChild(resultSpan);
-
+                calculationPerformed = true;
             } catch (error) {
                 displayContent.textContent = 'Error';
+                calculationPerformed = false;
+            }
+        } else if (['+', '-', '*', '/'].includes(buttonText)) {
+            if (calculationPerformed) {
+                // Allow operators after calculation
+                input = input.toString(); // Convert the result to a string
+                input += buttonText;
+                displayContent.textContent += buttonText;
+                calculationPerformed = false;
+            } else {
+                input += buttonText;
+                displayContent.textContent += buttonText;
             }
         } else {
-            input += buttonText;
+            if (calculationPerformed) {
+                input = buttonText;
+                displayContent.textContent = buttonText;
+                calculationPerformed = false;
+            } else {
+                input += buttonText;
+                displayContent.textContent += buttonText;
+            }
         }
-
-        const refreshButton = document.querySelector('.AC')
-        refreshButton.addEventListener('click', () => {
-            displayContent.textContent = '';
-        });
     });
 });
